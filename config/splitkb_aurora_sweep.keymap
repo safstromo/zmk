@@ -30,29 +30,17 @@
             bindings = <&kp TAB>;
         };
 
-            combo_ralt {
+                           combo_del {
             timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
-        };
-
-                    combo_lalt {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LALT>;
-        };
-
-                           combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
+            key-positions = <28 29>;
+            bindings = <&kp DEL>;
         };
 
 
-       combo_rgui {
+       combo_bspc {
             timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RGUI>;
+            key-positions = <25 26>;
+            bindings = <&kp BSPC>;
         };
 
 
