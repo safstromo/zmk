@@ -10,8 +10,8 @@
 
 
 &mt {
-  //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
+    flavor = "tap-preferred";
+    tapping_term_ms = <200>;
 };
 
 / {
@@ -65,9 +65,9 @@
             default_layer {
         bindings = <
         &kp Q &kp W &kp E &kp R &kp T                       &kp Y &kp U  &kp I    &kp O   &kp P
-        &kp A &kp S &kp D &kp F &kp G                               &kp H &kp J &kp K &kp L &kp QUOT
-        &mt LSFT Z &kp X &kp C &kp V &kp B                      &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
-                        &mo 1 &kp LCTL                  &kp SPC &mo 2
+&mt LGUI A &mt LALT S &mt LSFT D &mt LCTL F &kp G                               &kp H &mt RCTL J &mt RSFT K &mt RALT L &mt RGUI QUOT
+        &kp Z &kp X &kp C &kp V &kp B                      &kp N &kp M  &kp CMMA &kp DOT &kp SLASH
+                        &mo 1 &kp SPC                  &kp RET &mo 2
         >;
         };
 
