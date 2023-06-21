@@ -63,7 +63,7 @@
             left_layer {
         bindings = <
         &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT             &kp CRRT &kp LBKT &kp RBKT &kp AMPS &kp KMLT
-        &kp TAB    &kp LC(S)    &kp DQT      &kp SQT     &kp PIPE         &kp UNDER &kp LBRC  &kp RBRC &kp EQL  &kp BSPC
+        &mt LGUI TAB &mt LALT LC(S) &mt LSFT DQT &mt LCTL SQT &kp PIPE         &kp UNDER &mt RCTL LBRC  &mt RSFT RBRC &mt RALT EQL  &mt LALT BSPC
         &kp ESC    &kp TILDE    &kp APOS &kp PIPE2  &kp NON_US_BSLH     &kp MINUS &kp LPRN &kp RPRN &kp PLUS  &kp DEL
                         &mo 1  &kp LGUI                     &kp RGUI &mo 3
         >;
@@ -81,7 +81,7 @@
             right_layer {
         bindings = <
         &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp NUM_4  &kp NUM_5     &kp NUM_6  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp NUM_0
-        &kp TAB  &kp FSLH &kp DOT &kp COLON &kp GRAVE     &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT
+&mt LGUI TAB  &mt LALT FSLH &mt LSFT DOT &mt LCTL COLON &kp GRAVE     &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT
         &kp ESC  &kp LC(X) &kp LC(C) &kp LC(V)   &kp LC(Z)             &kp PG_DN &kp HOME &kp END &kp INSERT  &kp DEL
                             &mo 3 &trans                &trans  &mo 2
         >;
