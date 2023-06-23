@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
+#include "keys_sv.h"
 
 &mt {
     flavor = "tap-preferred";
@@ -30,7 +30,7 @@
             bindings = <&kp TAB>;
         };
 
-                           combo_del {
+         combo_del {
             timeout-ms = <50>;
             key-positions = <28 29>;
             bindings = <&kp DEL>;
@@ -43,7 +43,23 @@
             bindings = <&kp BSPC>;
         };
 
+        combo_ae {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp SE_A_UMLAUT>;
+        };
 
+        combo_oe {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp SE_O_TILDE>;
+        };
+
+        combo_a {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp SE_A_RING>;
+        };
 
     };
 
