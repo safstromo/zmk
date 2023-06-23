@@ -46,19 +46,19 @@
         combo_ae {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            bindings = <&kp SE_A_UMLAUT>;
+            bindings = <&kp RA(Q)>;
         };
 
         combo_oe {
             timeout-ms = <50>;
             key-positions = <27 28>;
-            bindings = <&kp SE_O_TILDE>;
+            bindings = <&kp RA(P)>;
         };
 
         combo_a {
             timeout-ms = <50>;
             key-positions = <7 8>;
-            bindings = <&kp SE_A_RING>;
+            bindings = <&kp RA(W)>;
         };
 
     };
