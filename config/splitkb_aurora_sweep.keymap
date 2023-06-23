@@ -69,9 +69,9 @@
             default_layer {
         bindings = <
 
-        &kp Q &kp W &kp E &kp R &kp T                       &kp Y &kp U  &kp I    &kp O   &kp P
-&mt LGUI A &mt LALT S &mt LSFT D &mt LCTL F &kp G                               &kp H &mt RCTL J &mt RSFT K &mt RALT L &mt LALT SEMI
-        &kp Z &kp X &kp C &kp V &kp B                      &kp N &kp M  &kp CMMA &kp DOT &kp SLASH
+        &kp Q &kp W &kp F &kp P &kp B                       &kp J &kp L  &kp U    &kp Y   &kp SEMI
+&mt LGUI A &mt LALT R &mt LSFT S &mt LCTL T &kp G                               &kp M &mt RCTL N &mt RSFT E &mt RALT I &mt LALT O
+        &kp Z &kp X &kp C &kp D &kp V                      &kp K &kp H  &kp CMMA &kp DOT &kp SLASH
                         &mo 1 &kp SPC                  &kp RET &mo 2
         >;
         };
@@ -98,7 +98,7 @@
         bindings = <
         &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp NUM_4  &kp NUM_5     &kp NUM_6  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp NUM_0
 &mt LGUI TAB  &mt LALT FSLH &mt LSFT DOT &mt LCTL COLON &kp GRAVE     &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-        &kp ESC  &kp LC(X) &kp LC(C) &kp LC(V)   &kp LC(Z)             &kp PG_DN &kp HOME &kp END &kp INSERT  &kp DEL
+        &kp ESC  &kp LC(X) &kp LC(C) &kp LC(Z)   &kp LC(V)             &kp PG_DN &kp HOME &kp END &kp INSERT  &kp DEL
                             &mo 3 &trans                &trans  &mo 2
         >;
         };
