@@ -26,13 +26,13 @@
 
          combo_tab {
             timeout-ms = <50>;
-            key-positions = <12 13>;
+            key-positions = <11 12>;
             bindings = <&kp TAB>;
         };
-        combo_LBKT {
+        combo_LPRN {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp LPRN>;
         };
 
         combo_LBRC {
@@ -41,10 +41,10 @@
             bindings = <&kp LBRC>;
         };
 
-        combo_RBKT {
+        combo_RPRN {
             timeout-ms = <50>;
             key-positions = <6 7>;
-            bindings = <&kp RBKT>;
+            bindings = <&kp RPRN>;
         };
 
         combo_RBRC {
@@ -58,7 +58,7 @@
             key-positions = <28 29>;
             bindings = <&kp DEL>;
         };
-         
+
        combo_bspc {
             timeout-ms = <50>;
             key-positions = <16 17>;
