@@ -21,67 +21,84 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
+            layers = <0 1 2 3>;
             bindings = <&kp ESC>;
         };
 
          combo_tab {
             timeout-ms = <50>;
             key-positions = <11 12>;
+            layers = <0 1 2 3>;
             bindings = <&kp TAB>;
         };
         combo_LPRN {
             timeout-ms = <50>;
             key-positions = <2 3>;
+            layers = <0 1 2 3>;
             bindings = <&kp LPRN>;
         };
 
         combo_LBRC {
             timeout-ms = <50>;
             key-positions = <22 23>;
+            layers = <0 1 2 3>;
             bindings = <&kp LBRC>;
         };
 
         combo_RPRN {
             timeout-ms = <50>;
             key-positions = <6 7>;
+            layers = <0 1 2 3>;
             bindings = <&kp RPRN>;
         };
 
         combo_RBRC {
             timeout-ms = <50>;
             key-positions = <26 27>;
+            layers = <0 1 2 3>;
             bindings = <&kp RBRC>;
         };
 
          combo_del {
             timeout-ms = <50>;
             key-positions = <28 29>;
+            layers = <0 1 2 3>;
             bindings = <&kp DEL>;
         };
 
        combo_bspc {
             timeout-ms = <50>;
             key-positions = <16 17>;
+            layers = <0 1 2 3>;
             bindings = <&kp BSPC>;
         };
 
         combo_ae {
             timeout-ms = <50>;
             key-positions = <17 18>;
+            layers = <0 1 2 3>;
             bindings = <&kp RA(Q)>;
         };
 
         combo_oe {
             timeout-ms = <50>;
             key-positions = <27 28>;
+            layers = <0 1 2 3>;
             bindings = <&kp RA(P)>;
         };
 
         combo_a {
             timeout-ms = <50>;
             key-positions = <7 8>;
+            layers = <0 1 2 3>;
             bindings = <&kp RA(W)>;
         };
+
+        combo_to_default {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&to 0>;
+};
 
     };
 
@@ -107,15 +124,6 @@
         >;
         };
 
-//   old         left_layer {
-//        bindings = <
-//        &kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5     &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0
-//        &kp TAB    &kp LC(S)    &kp DQT      &kp PIPE2     &kp HASH         &kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp DEL
-//        &kp ESC    &kp TILDE    &kp APOS &kp SQT  &kp NON_US_BSLH     &kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &kp DEL
-//                        &mo 1  &kp LGUI                     &kp RGUI &mo 2
-//>;
-//};
-
             right_layer {
         bindings = <
         &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp NUM_4  &kp NUM_5     &kp NUM_6  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp NUM_0
@@ -126,32 +134,23 @@
         };
 
 
-//    old    right_layer {
-//        bindings = <
-//        &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT             &kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN
-//        &kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN           &kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-//        &kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH             &kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-//                      &mo 3 &kp LCTL                &kp SPC  &mo 2
-//        >;
-//        };
-
              tri_layer {
         bindings = <
         &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                              &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-        &kp LGUI &kp LALT &kp LSFT &kp LCTL &trans            &trans &trans  &kp K_VOL_UP &kp K_MUTE &kp F11
+        &kp LGUI &kp LALT &kp LSFT &kp LCTL &trans            &to 4 &trans  &kp K_VOL_UP &kp K_MUTE &kp F11
         &bt BT_CLR  &bt BT_NXT &bt BT_PRV &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2 &kp PSCRN  &kp K_VOL_DN  &trans &kp F12
                         &trans &trans                      &trans &trans
->;
-};
+        >;
+        };
+            gaming_layer {
+        bindings = <
 
-//     old   tri_layer {
-//        bindings = <
-//        &kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5             &trans &trans   &trans   &trans  &trans
-//        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                          &trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans
-//        &bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7                 &trans &kp PG_DN  &kp K_VOL_DN  &trans &trans
-//                     &trans &trans                      &trans &trans
-//        >;
-//        };
+        &kp TAB &kp Q &kp W &kp E &kp R                       &kp T &kp Y  &kp U &kp I &kp O
+        &kp LSFT &kp A &kp S &kp D &kp F                      &kp G &kp H &kp J &kp K &kp L
+        &kp LCTL &kp Z &kp X &kp C &kp V                      &kp B &kp N &kp M &kp CMMA &kp DOT
+                    &kp SLASH &kp SPC                  &kp RET &mo 2
+        >;
+        };
 
     };
 };
