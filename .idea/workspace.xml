@@ -13,7 +13,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="345d4ac8-651a-44cd-855b-64d6ae756849" name="Changes" comment="alt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/splitkb_aurora_sweep.keymap" beforeDir="false" afterPath="$PROJECT_DIR$/config/splitkb_aurora_sweep.keymap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +94,7 @@
       <workItem from="1687874316850" duration="777000" />
       <workItem from="1688029667203" duration="1937000" />
       <workItem from="1688068064006" duration="266000" />
-      <workItem from="1688068614007" duration="850000" />
+      <workItem from="1688068614007" duration="1753000" />
     </task>
     <task id="LOCAL-00001" summary="Fix graph matrix">
       <created>1685447913655</created>
