@@ -14,6 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="345d4ac8-651a-44cd-855b-64d6ae756849" name="Changes" comment="alt">
       <change beforePath="$PROJECT_DIR$/config/corne.keymap" beforeDir="false" afterPath="$PROJECT_DIR$/config/corne.keymap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/splitkb_aurora_sweep.keymap" beforeDir="false" afterPath="$PROJECT_DIR$/config/splitkb_aurora_sweep.keymap" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,7 @@
       <workItem from="1687870753450" duration="2000" />
       <workItem from="1687873686104" duration="216000" />
       <workItem from="1687874316850" duration="777000" />
-      <workItem from="1688029667203" duration="1328000" />
+      <workItem from="1688029667203" duration="1901000" />
     </task>
     <task id="LOCAL-00001" summary="Fix graph matrix">
       <created>1685447913655</created>
