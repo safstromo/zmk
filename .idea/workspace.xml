@@ -13,9 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="345d4ac8-651a-44cd-855b-64d6ae756849" name="Changes" comment="alt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/splitkb_aurora_sweep.keymap" beforeDir="false" afterPath="$PROJECT_DIR$/config/splitkb_aurora_sweep.keymap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/splitkb_aurora_sweep.conf" beforeDir="false" afterPath="$PROJECT_DIR$/config/splitkb_aurora_sweep.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,7 @@
       <workItem from="1689181683886" duration="897000" />
       <workItem from="1689250445760" duration="1611000" />
       <workItem from="1689596905219" duration="8000" />
-      <workItem from="1691850385307" duration="330000" />
+      <workItem from="1691850385307" duration="955000" />
     </task>
     <task id="LOCAL-00001" summary="Fix graph matrix">
       <created>1685447913655</created>
