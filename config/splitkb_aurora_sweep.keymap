@@ -145,7 +145,7 @@
         &kp Q &kp W &kp F &kp P &kp B                       &kp J &kp L  &kp U    &kp Y   &kp SEMI
         &mt LGUI A &mt LALT R &mt LSFT S &mt LCTL T &kp G   &kp M &mt RCTL N &mt RSFT E &mt RALT I &mt LGUI O
         &kp Z &kp X &kp C &kp D &kp V                       &kp K &kp H  &kp CMMA &kp DOT &kp SLASH
-                        &mo 1 &kp SPC                       &kp RET &mo 2
+                        &mo 1 &mt LALT SPC                       &kp RET &mo 2
         >;
         };
 
