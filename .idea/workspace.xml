@@ -12,9 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="345d4ac8-651a-44cd-855b-64d6ae756849" name="Changes" comment="alt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="345d4ac8-651a-44cd-855b-64d6ae756849" name="Changes" comment="alt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +101,7 @@
       <workItem from="1689250445760" duration="1611000" />
       <workItem from="1689596905219" duration="8000" />
       <workItem from="1691850385307" duration="3434000" />
-      <workItem from="1692172062701" duration="1000" />
+      <workItem from="1692172062701" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="Fix graph matrix">
       <created>1685447913655</created>
