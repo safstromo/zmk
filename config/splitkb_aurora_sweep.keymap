@@ -31,7 +31,7 @@
     };
 
     combos {
-        compatible = "zmk,combos,behavior-caps-word";
+        compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
