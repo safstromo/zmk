@@ -15,87 +15,126 @@
 };
 
 / {
+    macros {
+
+        ZMK_MACRO(arrow,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp MINUS &kp LS(DOT)>;
+        )
+
+        ZMK_MACRO(eql_arrow,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp EQL &kp LS(DOT)>;
+        )
+    };
 
     combos {
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <0 1>;
             bindings = <&kp ESC>;
+        };
+        combo_capsword {
+            timeout-ms = <50>;
+            key-positions = <12 17>;
+            bindings = <&caps_word>;
+        };
+        combo_eql_arrow {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            layers = <0 1 2 4>;
+            bindings = <&eql_arrow>;
+        };
+
+        combo_arrow {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            layers = <0 1 2 4>;
+            bindings = <&arrow>;
         };
 
          combo_tab {
             timeout-ms = <50>;
-            key-positions = <14 15>;
+            key-positions = <11 12>;
             layers = <0 1 2 4>;
             bindings = <&kp TAB>;
         };
         combo_LPRN {
             timeout-ms = <50>;
-            key-positions = <3 4>;
+            key-positions = <2 3>;
             layers = <0 1 2 4>;
             bindings = <&kp LPRN>;
         };
 
         combo_LBRC {
             timeout-ms = <50>;
-            key-positions = <27 28>;
+            key-positions = <22 23>;
             layers = <0 1 2 4>;
             bindings = <&kp LBRC>;
         };
 
         combo_RPRN {
             timeout-ms = <50>;
-            key-positions = <7 8>;
+            key-positions = <6 7>;
             layers = <0 1 2 4>;
             bindings = <&kp RPRN>;
         };
 
         combo_RBRC {
             timeout-ms = <50>;
-            key-positions = <31 32>;
+            key-positions = <26 27>;
             layers = <0 1 2 4>;
             bindings = <&kp RBRC>;
         };
 
+        combo_UNDER {
+            timeout-ms = <50>;
+            key-positions = <15 25>;
+            layers = <0 1 2 4>;
+            bindings = <&kp UNDER>;
+        };
+
          combo_del {
             timeout-ms = <50>;
-            key-positions = <33 34>;
+            key-positions = <28 29>;
             layers = <0 1 2 4>;
             bindings = <&kp DEL>;
         };
 
        combo_bspc {
             timeout-ms = <50>;
-            key-positions = <19 20>;
+            key-positions = <16 17>;
             layers = <0 1 2 4>;
             bindings = <&kp BSPC>;
         };
 
         combo_ae {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <17 18>;
             layers = <0 1 2 4>;
             bindings = <&kp RA(Q)>;
         };
 
         combo_oe {
             timeout-ms = <50>;
-            key-positions = <32 33>;
+            key-positions = <27 28>;
             layers = <0 1 2 4>;
             bindings = <&kp RA(P)>;
         };
 
         combo_a {
             timeout-ms = <50>;
-            key-positions = <8 9>;
+            key-positions = <7 8>;
             layers = <0 1 2 4>;
             bindings = <&kp RA(W)>;
         };
 
         combo_to_default {
             timeout-ms = <50>;
-            key-positions = <38 39>;
+            key-positions = <31 32>;
             bindings = <&to 0>;
 };
 
@@ -107,30 +146,30 @@
             default_layer {
         bindings = <
 
-        &trans   &kp Q &kp W &kp F &kp P &kp B                          &kp J &kp L  &kp U    &kp Y   &kp SEMI &trans
-        &trans &mt LGUI A &mt LALT R &mt LSFT S &mt LCTL T &kp G        &kp M &mt RCTL N &mt RSFT E &mt RALT I &mt LALT O &trans
-        &trans   &kp Z &kp X &kp C &kp D &kp V                          &kp K &kp H  &kp CMMA &kp DOT &kp SLASH &trans
-                            &kp DEL &mo 1 &kp SPC                       &kp RET &mo 2 &kp DEL
+        &trans   &kp Q &kp W &kp F &kp P &kp B                       &kp J &kp L  &kp U    &kp Y   &kp SEMI &trans
+        &trans &mt LGUI A &mt LALT R &mt LSFT S &mt LCTL T &kp G     &kp M &mt RCTL N &mt RSFT E &mt RALT I &mt LGUI O &trans
+        &trans   &kp Z &kp X &kp C &kp D &kp V                       &kp K &kp H  &kp CMMA &kp DOT &kp SLASH &trans
+                            &kp TAB &mo 1 &mt LALT SPC                       &kp RET &mo 2 &kp BSPC
         >;
         };
 
             left_layer {
         bindings = <
 
-        &trans  &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT                                    &kp CRRT &kp LBKT &kp RBKT &kp AMPS &kp KMLT &trans
-        &trans  &mt LGUI TAB &mt LALT LC(S) &mt LSFT LS(RA(DQT)) &mt LCTL RA(SQT) &kp PIPE         &kp UNDER &mt RCTL LBRC  &mt RSFT RBRC &mt RALT EQL  &mt LALT BSPC &trans
-        &trans   &kp ESC    &kp TILDE    &kp APOS &kp PIPE2  &kp BACKSLASH                         &kp MINUS &kp LPRN &kp RPRN &kp PLUS  &kp DEL &trans
-                                                         &kp DEL &mo 1  &kp LGUI                   &kp RGUI &mo 4 &kp DEL
+        &trans  &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT                                 &kp CRRT &kp LBKT &kp RBKT &kp AMPS &kp KMLT &trans
+        &trans  &mt LGUI TAB &mt LALT LC(S) &mt LSFT LS(RA(DQT)) &mt LCTL RA(SQT) &kp PIPE      &kp UNDER &mt RCTL LBRC  &mt RSFT RBRC &mt RALT EQL  &mt LALT BSPC &trans
+        &trans  &kp ESC &kp TILDE &kp APOS &kp PIPE2 &kp BACKSLASH                              &kp MINUS &kp LPRN &kp RPRN &kp PLUS  &kp DEL &trans
+                                           &trans &mo 1  &kp LGUI                                &trans &mo 4 &trans
         >;
         };
 
             right_layer {
         bindings = <
 
-        &trans    &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp NUM_4  &kp NUM_5                 &kp NUM_6  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp NUM_0 &trans
-        &trans &mt LGUI TAB  &mt LALT FSLH &mt LSFT DOT &mt LCTL COLON &kp GRAVE        &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT &trans
+        &trans    &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp NUM_4  &kp NUM_5                   &kp NUM_6  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp NUM_0 &trans
+        &trans &mt LGUI TAB  &mt LALT FSLH &mt LSFT DOT &mt LCTL COLON &kp GRAVE       &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT &trans
         &trans  &kp ESC  &kp LC(X) &kp LC(C) &kp LC(Z)   &kp LC(V)                      &kp PG_DN &kp HOME &kp END &kp INSERT  &kp DEL &trans
-                                                     &kp DEL &mo 4 &trans               &trans  &mo 2 &kp DEL
+                                                     &trans &mo 4 &trans               &trans  &mo 2 &trans
         >;
         };
             gaming_layer {
