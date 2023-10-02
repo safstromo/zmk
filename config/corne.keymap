@@ -39,7 +39,7 @@
         };
         combo_capsword {
             timeout-ms = <50>;
-            key-positions = <16 20>;
+            key-positions = <15 20>;
             bindings = <&caps_word>;
         };
         combo_eql_arrow {
@@ -51,7 +51,7 @@
 
         combo_arrow {
             timeout-ms = <50>;
-            key-positions = <17 18>;
+            key-positions = <16 17>;
             layers = <0 1 2 4>;
             bindings = <&arrow>;
         };
@@ -71,7 +71,7 @@
 
         combo_LBRC {
             timeout-ms = <50>;
-            key-positions = <28 29>;
+            key-positions = <27 28>;
             layers = <0 1 2 4>;
             bindings = <&kp LBRC>;
         };
@@ -85,7 +85,7 @@
 
         combo_RBRC {
             timeout-ms = <50>;
-            key-positions = <32 33>;
+            key-positions = <31 32>;
             layers = <0 1 2 4>;
             bindings = <&kp RBRC>;
         };
@@ -99,7 +99,7 @@
 
          combo_del {
             timeout-ms = <50>;
-            key-positions = <34 35>;
+            key-positions = <33 34>;
             layers = <0 1 2 4>;
             bindings = <&kp DEL>;
         };
@@ -120,7 +120,7 @@
 
         combo_oe {
             timeout-ms = <50>;
-            key-positions = <33 34>;
+            key-positions = <32 33>;
             layers = <0 1 2 4>;
             bindings = <&kp RA(P)>;
         };
@@ -134,7 +134,7 @@
 
         combo_to_default {
             timeout-ms = <50>;
-            key-positions = <39 40>;
+            key-positions = <38 39>;
             bindings = <&to 0>;
 };
 
