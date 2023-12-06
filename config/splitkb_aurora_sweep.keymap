@@ -89,7 +89,7 @@
             layers = <0 1 2 4>;
             bindings = <&kp RBRC>;
         };
-        
+
         combo_LBKT {
             timeout-ms = <50>;
             key-positions = <3 13>;
@@ -172,7 +172,7 @@
 
         &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT                                 &kp CRRT &kp LBKT &kp RBKT &kp AMPS &kp KMLT
         &mt LGUI TAB &mt LALT LC(S) &mt LSFT LS(RA(DQT)) &mt LCTL RA(SQT) &kp PIPE      &kp UNDER &mt RCTL LBRC  &mt RSFT RBRC &mt RALT EQL  &mt LALT BSPC
-        &kp ESC &kp TILDE &kp APOS &kp PIPE2 &kp BACKSLASH                              &kp MINUS &kp LPRN &kp RPRN &kp PLUS  &kp DEL
+        &kp ESC &kp TILDE &kp GRAVE &kp PIPE2 &kp BACKSLASH                              &kp MINUS &kp LPRN &kp RPRN &kp PLUS  &kp DEL
                                  &mo 1  &kp LGUI                                        &trans &mo 4
         >;
         };
