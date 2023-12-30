@@ -5,7 +5,7 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
+#ainclude <dt-bindings/zmk/keys.h>
 
 #define DEF_L 0
 #define NAV_L 1
@@ -26,30 +26,168 @@
         };
     };
 
+    macros {
+
+        ZMK_MACRO(arrow,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp MINUS &kp LS(DOT)>;
+        )
+
+        ZMK_MACRO(eql_arrow,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp EQL &kp LS(DOT)>;
+        )
+    };
+
     combos {
         compatible = "zmk,combos";
         combo_z {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <0 10>;
+            layers = <0>;
             bindings = <&kp Z>;
         };
-        combo_b {
+        combo_g {
             timeout-ms = <50>;
-            key-positions = <21 22>;
-            bindings = <&kp B>;
+            key-positions = <4 14>;
+            layers = <0>;
+            bindings = <&kp G>;
         };
 
-        combo_y {
+        combo_m {
             timeout-ms = <50>;
-            key-positions = <23 24>;
-            bindings = <&kp Y>;
+            key-positions = <5 15>;
+            layers = <0>;
+            bindings = <&kp M>;
         };
 
         combo_slash {
             timeout-ms = <50>;
-            key-positions = <24 25>;
+            key-positions = <9 19>;
+            layers = <0>;
             bindings = <&kp SLASH>;
         };
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+
+        combo_capsword {
+            timeout-ms = <50>;
+            key-positions = <12 17>;
+            bindings = <&caps_word>;
+        };
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            layers = <0>;
+            bindings = <&kp TAB>;
+        };
+
+        combo_LPRN {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            layers = <0 1 2 4>;
+            bindings = <&kp LPRN>;
+        };
+
+        combo_LBRC {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            layers = <0 1 2 4>;
+            bindings = <&kp LBRC>;
+        };
+
+        combo_RPRN {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            layers = <0 1 2 4>;
+            bindings = <&kp RPRN>;
+        };
+
+        combo_RBRC {
+            timeout-ms = <50>;
+            key-positions = <23 24>;
+            layers = <0 1 2 4>;
+            bindings = <&kp RBRC>;
+        };
+
+        combo_LBKT {
+            timeout-ms = <50>;
+            key-positions = <3 13>;
+            layers = <0 1 2 4>;
+            bindings = <&kp LBKT>;
+        };
+
+        combo_RBKT {
+            timeout-ms = <50>;
+            key-positions = <6 16>;
+            layers = <0 1 2 4>;
+            bindings = <&kp RBKT>;
+        };
+
+        combo_UNDER {
+            timeout-ms = <50>;
+            key-positions = <16 23>;
+            layers = <0 1 2 4>;
+            bindings = <&kp UNDER>;
+        };
+
+         combo_del {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            layers = <0 1 2 4>;
+            bindings = <&kp DEL>;
+        };
+
+       combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            layers = <0 1 2 4>;
+            bindings = <&kp LC(BSPC)>;
+        };
+
+        combo_ae {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            layers = <0 1 2 4>;
+            bindings = <&kp RA(Q)>;
+        };
+
+        combo_oe {
+            timeout-ms = <50>;
+            key-positions = <24 25>;
+            layers = <0 1 2 4>;
+            bindings = <&kp RA(P)>;
+        };
+
+        combo_a {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            layers = <0 1 2 4>;
+            bindings = <&kp RA(W)>;
+        };
+
+        combo_eql_arrow {
+            timeout-ms = <50>;
+            key-positions = <4 13>;
+            layers = <0 1 2 4>;
+            bindings = <&eql_arrow>;
+        };
+
+        combo_arrow {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            layers = <0 1 2 4>;
+            bindings = <&arrow>;
+        };
+
+
     };
 
     keymap {
@@ -57,40 +195,40 @@
 
         default_layer {
             bindings = <
-                &kp Q      &kp W      &kp E       &kp R           &kp T        &kp H            &kp U          &kp I       &kp O      &kp P
-                &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F     &kp G        &kp N            &hm RSHFT J    &hm RCTRL K &hm LALT L &hm RGUI QUOT
-                           &kp X      &kp C       &kp V                                         &kp M          &kp COMMA  &kp DOT
-                                                  &lt NAV_L TAB  &kp RET       &lt NUM_L SPACE  &lt SYM_L BKSP
+                &kp Q      &kp W      &kp F       &kp P           &kp B        &kp J            &kp L          &kp U       &kp Y      &kp SEMI
+                &hm LGUI A &hm LALT R &hm LSHFT S &hm LCTRL T     &kp V        &kp K            &hm RCTRL N    &hm RSHFT E &hm LALT I &hm LGUI O
+                           &kp X      &kp C       &kp D                                         &kp H          &kp COMMA  &kp DOT
+                                                  &lt SYM_L TAB  &mt LALT SPACE       &kp RET  &lt NAV_L BKSP
             >;
         };
 
         nav_layer {
             display-name = "Nav";
             bindings = <
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &kp UARW &kp PG_UP  &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp LARW       &kp DARW &kp RARW   &trans
-                           &trans     &trans      &trans                                        &kp END        &trans   &kp PG_DN
-                                                  &trans          &trans       &kp ESC          &kp DEL
+                &kp NUM_1  &kp NUM_2  &kp NUM_3   &kp NUM_4       &kp NUM_5    &kp NUM_6        &kp NUM_7     &kp NUM_8  &kp NUM_9  &kp NUM_0
+                &trans     &trans     &trans      &trans          &kp HOME     &kp END          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
+                           &trans     &trans      &trans                                        &kp PG_UP     &kp PG_DOWN &kp INSERT
+                                                  &mo NUM_L       &trans       &trans           &trans
             >;
         };
 
-        num_layer {
+        fun_layer {
             display-name = "Num";
             bindings = <
-                &kp LBKT   &kp N7     &kp N8      &kp N9          &kp RBKT      &trans          &trans         &trans      &trans     &trans
-                &kp SEMI   &kp N4     &kp N5      &kp N6          &kp EQUAL     &trans          &trans         &trans      &trans     &trans
-                           &kp N1     &kp N2      &kp N3                                        &trans         &trans      &trans
-                                                  &kp N0          &kp MINUS     &trans          &trans
+                &kp F1     &kp F2     &kp F3      &kp F4          &kp F5        &kp F6          &kp F7         &kp F8      &kp F9     &kp F10
+                &kp PSCRN  &trans     &trans      &trans          &trans        &trans          &trans         &trans      &kp F11    &kp F12
+                           &trans     &trans      &trans                                        &kp K_VOL_UP   &kp K_VOL_DN &kp K_MUTE
+                                                  &trans          &trans        &trans          &trans
             >;
         };
 
         sym_layer {
             display-name = "Sym";
             bindings = <
-                &kp LBRC   &kp LS(N7) &kp LS(N8)  &kp LS(N9)      &kp RBRC      &trans          &trans         &trans      &trans     &trans
-                &kp COLON  &kp LS(N4) &kp LS(N5)  &kp LS(N6)      &kp PLUS      &trans          &trans         &trans      &trans     &trans
-                           &kp LS(N1) &kp LS(N2)  &kp LS(N3)                                    &trans         &trans      &trans
-                                                  &kp LS(N0)      &kp UNDER     &trans          &trans
+                &kp BANG   &kp ATSN   &kp HASH    &kp DLLR        &kp PRCT     &kp CRRT         &kp LBKT       &kp RBKT    &kp AMPS   &kp KMLT
+                &mt LGUI TAB &mt LALT LC(S) &mt LSFT LS(RA(DQT)) &mt LCTL RA(SQT) &kp BACKSLASH &kp UNDER &mt RCTL LBRC  &mt RSFT RBRC &mt RALT EQL  &mt LALT SLSH
+                           &kp TILDE  &kp GRAVE   &kp PIPE                                      &kp MINUS      &kp EQL    &kp PLUS
+                                                  &trans          &trans       &trans           &mo NUM_L
             >;
         };
     };
