@@ -226,7 +226,7 @@
             display-name = "Sym";
             bindings = <
                 &kp BANG   &kp ATSN   &kp HASH    &kp DLLR        &kp PRCT     &kp CRRT         &kp LBKT       &kp RBKT    &kp AMPS   &kp KMLT
-                &mt LGUI TAB  &mt LALT LC(S)  &mt LSFT LS(RA(DQT))  &mt LCTL RA(SQT)  &kp BACKSLASH  &kp UNDER  &mt RCTL LBRC  &mt RSFT RBRC  &mt RALT EQL  &mt LALT SLSH
+                &mt LGUI TAB  &mt LALT LC(S)     &mt LSFT LS(RA(DQT))      &mt LCTL RA(SQT)          &kp BACKSLASH        &kp UNDER          &mt RCTL LBRC         &mt RSFT RBRC      &mt RALT EQL    &mt LALT SLSH
                            &kp TILDE  &kp GRAVE   &kp PIPE                                      &kp MINUS      &kp EQL    &kp PLUS
                                                   &trans          &trans       &trans           &mo FUN_L
             >;
