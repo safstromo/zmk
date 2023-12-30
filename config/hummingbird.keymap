@@ -9,7 +9,7 @@
 
 #define DEF_L 0
 #define NAV_L 1
-#define NUM_L 2
+#define FUN_L 2
 #define SYM_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
@@ -207,17 +207,17 @@
             bindings = <
                 &kp NUM_1  &kp NUM_2  &kp NUM_3   &kp NUM_4       &kp NUM_5    &kp NUM_6        &kp NUM_7     &kp NUM_8  &kp NUM_9  &kp NUM_0
                 &trans     &trans     &trans      &trans          &kp HOME     &kp END          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-                           &trans     &trans      &trans                                        &kp PG_UP     &kp PG_DOWN   &kp INSERT
-                                                  &mo NUM_L       &trans       &trans           &trans
+                           &trans     &trans      &trans                                 &kp PG_UP   &kp PG_DOWN   &kp INSERT
+                                                  &mo FUN_L       &trans       &trans           &trans
             >;
         };
 
         fun_layer {
-            display-name = "Num";
+            display-name = "Fun";
             bindings = <
                 &kp F1     &kp F2     &kp F3      &kp F4          &kp F5        &kp F6          &kp F7         &kp F8      &kp F9     &kp F10
                 &kp PSCRN  &trans     &trans      &trans          &trans        &trans          &trans         &trans      &kp F11    &kp F12
-                           &trans     &trans      &trans                                        &kp K_VOL_UP   &kp K_VOL_DN &kp K_MUTE
+                           &trans     &trans      &trans                                        &kp K_VOL_UP   &kp K_VOL_DN   &kp K_MUTE
                                                   &trans          &trans        &trans          &trans
             >;
         };
@@ -228,7 +228,7 @@
                 &kp BANG   &kp ATSN   &kp HASH    &kp DLLR        &kp PRCT     &kp CRRT         &kp LBKT       &kp RBKT    &kp AMPS   &kp KMLT
                 &mt LGUI TAB &mt LALT LC(S) &mt LSFT LS(RA(DQT)) &mt LCTL RA(SQT) &kp BACKSLASH &kp UNDER &mt RCTL LBRC  &mt RSFT RBRC &mt RALT EQL  &mt LALT SLSH
                            &kp TILDE  &kp GRAVE   &kp PIPE                                      &kp MINUS      &kp EQL    &kp PLUS
-                                                  &trans          &trans       &trans           &mo NUM_L
+                                                  &trans          &trans       &trans           &mo FUN_L
             >;
         };
     };
