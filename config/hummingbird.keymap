@@ -9,7 +9,7 @@
 
 #define DEF_L 0
 #define NAV_L 1
-#define FUN_L 2
+#define NUM_L 2
 #define SYM_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
@@ -191,37 +191,37 @@
                 &kp Q      &kp W      &kp F       &kp P           &kp B        &kp J            &kp L          &kp U       &kp Y      &kp SEMI
                 &hm LGUI A &hm LALT R &hm LSHFT S &hm LCTRL T     &kp V        &kp K            &hm RCTRL N    &hm RSHFT E &hm LALT I &hm LGUI O
                            &kp X      &kp C       &kp D                                         &kp H          &kp COMMA  &kp DOT
-                                                  &lt SYM_L TAB  &mt LALT SPACE       &kp RET  &lt NAV_L BKSP
+                                                  &lt SYM_L TAB  &lt NUM_L SPACE       &lt NAV_L RET  &lt NAV_L BKSP
             >;
         };
 
         nav_layer {
             display-name = "Nav";
             bindings = <
-                &kp NUM_1  &kp NUM_2  &kp NUM_3   &kp NUM_4       &kp NUM_5    &kp NUM_6        &kp NUM_7     &kp NUM_8  &kp NUM_9  &kp NUM_0
-                &trans     &trans     &trans      &trans          &kp HOME     &kp END          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-                           &trans     &trans      &trans                                        &trans        &trans     &trans
-                                                  &mo FUN_L       &trans       &trans           &trans
+                &kp F12    &kp F7     &kp F8      &kp F9          &kp F10      &trans           &trans        &trans     &trans     &trans
+                &PSCRN     &kp F4     &kp F5      &kp F6          &kp HOME     &kp END          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
+                           &kp F1     &kp F2      &kp F3                                        &trans        &kp PG_DN  &PG_UP
+                                                  &kp F10         &kp F11      &trans           &trans
             >;
         };
 
-        fun_layer {
-            display-name = "Fun";
+        num_layer {
+            display-name = "Num";
             bindings = <
-                &kp F1     &kp F2     &kp F3      &kp F4          &kp F5        &kp F6          &kp F7         &kp F8      &kp F9     &kp F10
-                &kp PSCRN  &trans     &trans      &trans          &trans        &trans          &trans         &trans      &kp F11    &kp F12
-                           &trans      &trans     &trans                                        &kp K_VOL_UP   &kp K_VOL_DN  &kp K_MUTE
-                                                  &trans          &trans        &trans          &trans
+                &trans     &trans     &trans      &trans          &trans        &trans          &kp N7         &kp N8      &kp N9    &trans
+                &kp PSCRN  &trans     &trans      &trans          &trans        &trans          &kp N4         &kp N5      &kp N6    &trans
+                           &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP                                 &kp N1         &kp N2      &kp N3
+                                                  &trans          &trans        &kp N0          &trans
             >;
         };
 
         sym_layer {
             display-name = "Sym";
             bindings = <
+                &trans     &trans     &kp LS(RA(DQT))  &kp BACKSLASH &trans    &trans           &trans         &kp RA(SQT) &trans     &trans
                 &kp BANG   &kp ATSN   &kp HASH    &kp DLLR        &kp PRCT     &kp CRRT         &kp LBKT       &kp RBKT    &kp AMPS   &kp KMLT
-                &kp TAB    &kp LC(S)  &kp LS(RA(DQT))  &kp RA(SQT)  &kp BACKSLASH  &kp UNDER    &kp LBRC       &kp RBRC    &kp EQL    &kp SLASH
                            &kp TILDE  &kp GRAVE   &kp PIPE                                      &kp MINUS      &kp EQL     &kp PLUS
-                                                  &trans          &trans       &trans           &mo FUN_L
+                                                  &trans          &trans       &trans           &trans
             >;
         };
     };
