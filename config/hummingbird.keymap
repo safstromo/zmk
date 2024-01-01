@@ -145,13 +145,6 @@
             bindings = <&kp DEL>;
         };
 
-       combo_bspc {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            layers = <0 1 2 4>;
-            bindings = <&kp LC(BSPC)>;
-        };
-
         combo_ae {
             timeout-ms = <50>;
             key-positions = <17 18>;
@@ -207,7 +200,7 @@
             bindings = <
                 &kp NUM_1  &kp NUM_2  &kp NUM_3   &kp NUM_4       &kp NUM_5    &kp NUM_6        &kp NUM_7     &kp NUM_8  &kp NUM_9  &kp NUM_0
                 &trans     &trans     &trans      &trans          &kp HOME     &kp END          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-                           &trans     &trans      &trans                                 &trans   &trans   &trans
+                           &trans     &trans      &trans                                        &trans        &trans     &trans
                                                   &mo FUN_L       &trans       &trans           &trans
             >;
         };
@@ -217,7 +210,7 @@
             bindings = <
                 &kp F1     &kp F2     &kp F3      &kp F4          &kp F5        &kp F6          &kp F7         &kp F8      &kp F9     &kp F10
                 &kp PSCRN  &trans     &trans      &trans          &trans        &trans          &trans         &trans      &kp F11    &kp F12
-                           &trans      &trans       &trans                                         &kp K_VOL_UP          &kp K_VOL_DN  &kp K_MUTE
+                           &trans      &trans     &trans                                        &kp K_VOL_UP   &kp K_VOL_DN  &kp K_MUTE
                                                   &trans          &trans        &trans          &trans
             >;
         };
@@ -226,8 +219,8 @@
             display-name = "Sym";
             bindings = <
                 &kp BANG   &kp ATSN   &kp HASH    &kp DLLR        &kp PRCT     &kp CRRT         &kp LBKT       &kp RBKT    &kp AMPS   &kp KMLT
-                &kp TAB  &kp LC(S)  &kp LS(RA(DQT))  &kp RA(SQT)  &kp BACKSLASH  &kp UNDER  &kp LBRC  &kp RBRC  &kp EQL  &kp SLASH
-                           &kp TILDE  &kp GRAVE   &kp PIPE                                      &kp MINUS      &kp EQL    &kp PLUS
+                &kp TAB    &kp LC(S)  &kp LS(RA(DQT))  &kp RA(SQT)  &kp BACKSLASH  &kp UNDER    &kp LBRC       &kp RBRC    &kp EQL    &kp SLASH
+                           &kp TILDE  &kp GRAVE   &kp PIPE                                      &kp MINUS      &kp EQL     &kp PLUS
                                                   &trans          &trans       &trans           &mo FUN_L
             >;
         };
