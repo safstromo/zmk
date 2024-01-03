@@ -45,7 +45,7 @@
         compatible = "zmk,combos";
         combo_z {
             timeout-ms = <100>;
-            key-positions = <0 10>;
+            key-positions = <10 11>;
             layers = <0>;
             bindings = <&kp Z>;
         };
@@ -65,7 +65,7 @@
 
         combo_slash {
             timeout-ms = <100>;
-            key-positions = <9 19>;
+            key-positions = <18 19>;
             layers = <0>;
             bindings = <&kp SLASH>;
         };
