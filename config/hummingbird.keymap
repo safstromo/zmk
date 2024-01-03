@@ -89,44 +89,44 @@
             bindings = <&kp TAB>;
         };
 
-        combo_LPRN {
+       combo_LPRN {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <2 12>;
             layers = <0 1 2 4>;
             bindings = <&kp LPRN>;
         };
 
         combo_LBRC {
             timeout-ms = <50>;
-            key-positions = <21 22>;
+            key-positions = <3 13>;
             layers = <0 1 2 4>;
             bindings = <&kp LBRC>;
         };
 
+        combo_LBKT {
+            timeout-ms = <50>;
+            key-positions = <1 11>;
+            layers = <0 1 2 4>;
+            bindings = <&kp LBKT>;
+        };
+
         combo_RPRN {
             timeout-ms = <50>;
-            key-positions = <6 7>;
+            key-positions = <7 17>;
             layers = <0 1 2 4>;
             bindings = <&kp RPRN>;
         };
 
         combo_RBRC {
             timeout-ms = <50>;
-            key-positions = <23 24>;
+            key-positions = <6 16>;
             layers = <0 1 2 4>;
             bindings = <&kp RBRC>;
         };
 
-        combo_LBKT {
-            timeout-ms = <50>;
-            key-positions = <3 13>;
-            layers = <0 1 2 4>;
-            bindings = <&kp LBKT>;
-        };
-
         combo_RBKT {
             timeout-ms = <50>;
-            key-positions = <6 16>;
+            key-positions = <8 18>;
             layers = <0 1 2 4>;
             bindings = <&kp RBKT>;
         };
@@ -179,6 +179,13 @@
             layers = <0 1 2 4>;
             bindings = <&arrow>;
         };
+
+        combo_word {
+            timeout-ms = <50>;
+            key-positions = <23 25>;
+            bindings = <&kp LC(BKSP)>;
+        };
+
 
 
     };

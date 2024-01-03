@@ -9,12 +9,32 @@
 #include <dt-bindings/zmk/bt.h>
 #include "keys_se.h"
 
+#define DEF_L 0
+#define SYM_L 1
+#define NAV_L 2
+#define GAM_L 3
+#define FUN_L 4
+
+
+// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
+&lt { quick_tap_ms = <200>; };
+
 &mt {
     flavor = "tap-preferred";
     tapping_term_ms = <300>;
 };
 
 / {
+ behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <225>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     macros {
 
         ZMK_MACRO(arrow,
@@ -62,44 +82,45 @@
             layers = <0 1 2 4>;
             bindings = <&kp TAB>;
         };
+
         combo_LPRN {
             timeout-ms = <50>;
-            key-positions = <2 3>;
+            key-positions = <2 12>;
             layers = <0 1 2 4>;
             bindings = <&kp LPRN>;
         };
 
         combo_LBRC {
             timeout-ms = <50>;
-            key-positions = <22 23>;
+            key-positions = <3 13>;
             layers = <0 1 2 4>;
             bindings = <&kp LBRC>;
         };
 
+        combo_LBKT {
+            timeout-ms = <50>;
+            key-positions = <1 11>;
+            layers = <0 1 2 4>;
+            bindings = <&kp LBKT>;
+        };
+
         combo_RPRN {
             timeout-ms = <50>;
-            key-positions = <6 7>;
+            key-positions = <7 17>;
             layers = <0 1 2 4>;
             bindings = <&kp RPRN>;
         };
 
         combo_RBRC {
             timeout-ms = <50>;
-            key-positions = <26 27>;
+            key-positions = <6 16>;
             layers = <0 1 2 4>;
             bindings = <&kp RBRC>;
         };
 
-        combo_LBKT {
-            timeout-ms = <50>;
-            key-positions = <3 13>;
-            layers = <0 1 2 4>;
-            bindings = <&kp LBKT>;
-        };
-
         combo_RBKT {
             timeout-ms = <50>;
-            key-positions = <6 16>;
+            key-positions = <8 18>;
             layers = <0 1 2 4>;
             bindings = <&kp RBKT>;
         };
@@ -113,16 +134,9 @@
 
          combo_del {
             timeout-ms = <50>;
-            key-positions = <28 29>;
+            key-positions = <8 9>;
             layers = <0 1 2 4>;
             bindings = <&kp DEL>;
-        };
-
-       combo_bspc {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            layers = <0 1 2 4>;
-            bindings = <&kp BSPC>;
         };
 
         combo_ae {
@@ -161,19 +175,19 @@
         bindings = <
 
         &kp Q &kp W &kp F &kp P &kp B                       &kp J &kp L  &kp U    &kp Y   &kp SEMI
-        &kp A &mt LALT R &mt LSFT S &mt LCTL T &kp G   &kp M &mt RCTL N &mt RSFT E &mt RALT I &mt LGUI O
-        &mt LGUI Z &kp X &kp C &kp D &kp V                       &kp K &kp H  &kp CMMA &kp DOT &kp SLASH
-                        &mo 1 &mt LALT SPC                       &kp RET &mo 2
+        &kp A &hm LALT R &hm LSFT S &hm LCTL T &kp G   &kp M &hm RCTL N &hm RSFT E &hm RALT I &hm LGUI O
+        &hm LGUI Z &kp X &kp C &kp D &kp V                       &kp K &kp H  &kp CMMA &kp DOT &kp SLASH
+                        &lt SYM_L TAB &lt 2 SPC                       &lt NAV_L RET &lt NAV_L BKSP
         >;
         };
 
             left_layer {
         bindings = <
 
+        &trans    &trans  &kp LS(RA(DQT)) &kp BACKSLASH &trans                          &trans   &trans   &kp RA(SQT) &trans  &trans
         &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT                                 &kp CRRT &kp LBKT &kp RBKT &kp AMPS &kp KMLT
-        &mt LGUI TAB &mt LALT LC(S) &mt LSFT LS(RA(DQT)) &mt LCTL RA(SQT) &kp PIPE      &kp UNDER &mt RCTL LBRC  &mt RSFT RBRC &mt RALT EQL  &mt LALT BSPC
-        &kp ESC &kp TILDE &kp GRAVE &kp PIPE2 &kp BACKSLASH                              &kp MINUS &kp LPRN &kp RPRN &kp PLUS  &kp DEL
-                                 &mo 1  &kp LGUI                                        &trans &mo 4
+        &trans &kp TILDE  &kp GRAVE   &kp PIPE &trans                                   &kp MINUS &kp MINUS &kp EQL &kp PLUS &trans
+                                  &trans  &trans                                        &trans &mo FUN_L
         >;
         };
 
@@ -181,9 +195,9 @@
         bindings = <
 
         &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp NUM_4  &kp NUM_5                   &kp NUM_6  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp NUM_0
-        &mt LGUI TAB  &mt LALT FSLH &mt LSFT DOT &mt LCTL COLON &kp GRAVE       &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-        &kp ESC  &kp LC(X) &kp LC(C) &kp LC(Z)   &kp LC(V)                      &kp PG_DN &kp HOME &kp END &kp INSERT  &kp DEL
-                            &mo 4 &trans                                        &trans  &mo 2
+        &PSCRN  &trans &trans &trans &kp HOME                                   &kp END &kp LEFT &kp DOWN &kp UP  &kp RIGHT
+        &PSCRN  &kp LC(X) &kp LC(C) &kp LC(Z)   &kp LC(V)                       &trans  &trans   &kp PG_DN &kp PG_UP  &trans
+                            &mo FUN_L &trans                                        &trans  &trans
         >;
         };
             gaming_layer {
@@ -192,14 +206,14 @@
             &kp TAB &kp Q &kp W &kp E &kp R                       &kp T &kp Y  &kp U &kp I &kp O
             &kp LSFT &kp A &kp S &kp D &kp F                      &kp G &kp H &kp J &kp K &kp L
             &kp LCTL &kp Z &kp X &kp C &kp V                      &kp B &kp N &kp M &kp CMMA &kp DOT
-                            &kp SLASH &kp SPC                     &kp RET &mo 2
+                            &kp SLASH &kp SPC                     &kp RET &mo NAV_L
             >;
             };
 
              tri_layer {
         bindings = <
         &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                              &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-        &kp LGUI &kp LALT &kp LSFT &kp LCTL &trans                      &tog 3 &kp LCTL  &kp LSFT &kp LALT &kp F11
+        &kp LGUI &kp LALT &kp LSFT &kp LCTL &trans                      &tog GAM_L &kp LCTL  &kp LSFT &kp LALT &kp F11
         &kp PSCRN  &bt BT_NXT &bt BT_PRV &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2 &bt BT_CLR  &kp K_VOL_UP &kp K_VOL_DN &kp F12
                         &trans &trans                                   &trans &trans
         >;
