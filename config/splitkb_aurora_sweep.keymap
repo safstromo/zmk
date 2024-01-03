@@ -164,7 +164,14 @@
             timeout-ms = <50>;
             key-positions = <31 32>;
             bindings = <&to 0>;
-};
+        };
+
+        combo_word {
+            timeout-ms = <50>;
+            key-positions = <26 28>;
+            layers = <0 1 2 4>;
+            bindings = <&kp LC(BKSP)>;
+        };
 
     };
 
@@ -184,7 +191,7 @@
             left_layer {
         bindings = <
 
-        &trans    &trans  &kp LS(RA(DQT)) &kp BACKSLASH &trans                          &trans   &trans   &kp RA(SQT) &trans  &trans
+        &trans  &trans  &kp LS(RA(DQT)) &kp BACKSLASH &trans                            &trans   &trans   &kp RA(SQT) &trans  &trans
         &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT                                 &kp CRRT &kp LBKT &kp RBKT &kp AMPS &kp KMLT
         &trans &kp TILDE  &kp GRAVE   &kp PIPE &trans                                   &kp MINUS &kp MINUS &kp EQL &kp PLUS &trans
                                   &trans  &trans                                        &trans &mo FUN_L
@@ -195,8 +202,8 @@
         bindings = <
 
         &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp NUM_4  &kp NUM_5                   &kp NUM_6  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp NUM_0
-        &PSCRN  &trans &trans &trans &kp HOME                                   &kp END &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-        &PSCRN  &kp LC(X) &kp LC(C) &kp LC(Z)   &kp LC(V)                       &trans  &trans   &kp PG_DN &kp PG_UP  &trans
+        &kp PSCRN  &trans &trans &trans &kp HOME                                   &kp END &kp LEFT &kp DOWN &kp UP  &kp RIGHT
+        &kp PSCRN  &kp LC(X) &kp LC(C) &kp LC(Z)   &kp LC(V)                       &trans  &trans   &kp PG_DN &kp PG_UP  &trans
                             &mo FUN_L &trans                                        &trans  &trans
         >;
         };
