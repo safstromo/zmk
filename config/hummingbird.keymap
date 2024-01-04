@@ -180,12 +180,40 @@
             bindings = <&arrow>;
         };
 
-        combo_word {
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <23 24>;
+            bindings = <&kp BKSP>;
+        };
+
+        combo_delword {
             timeout-ms = <50>;
             key-positions = <23 25>;
+            layers = <0 1 2 4>;
             bindings = <&kp LC(BKSP)>;
         };
 
+        combo_eql {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            layers = <0 1 2 4>;
+            bindings = <&kp EQL>;
+        };
+
+        combo_minus {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            layers = <0 1 2 4>;
+            bindings = <&kp MINUS>;
+        };
+
+        combo_plus {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            layers = <0 1 2 4>;
+            bindings = <&kp PLUS>;
+        };
+ 
 
 
     };

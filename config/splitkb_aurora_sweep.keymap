@@ -12,6 +12,7 @@
 #define DEF_L 0
 #define SYM_L 1
 #define NAV_L 2
+#define NUM_L 2
 #define GAM_L 3
 #define FUN_L 4
 
@@ -166,13 +167,40 @@
             bindings = <&to 0>;
         };
 
-        combo_word {
+        combo_delword {
             timeout-ms = <50>;
             key-positions = <26 28>;
             layers = <0 1 2 4>;
             bindings = <&kp LC(BKSP)>;
         };
 
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            layers = <0 1 2 4>;
+            bindings = <&kp LC(BKSP)>;
+        };
+
+        combo_eql {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            layers = <0 1 2 4>;
+            bindings = <&kp EQL>;
+        };
+
+        combo_minus {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            layers = <0 1 2 4>;
+            bindings = <&kp MINUS>;
+        };
+
+        combo_plus {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            layers = <0 1 2 4>;
+            bindings = <&kp PLUS>;
+        };
     };
 
         keymap {
@@ -184,7 +212,7 @@
         &kp Q &kp W &kp F &kp P &kp B                       &kp J &kp L  &kp U    &kp Y   &kp SEMI
         &kp A &hm LALT R &hm LSFT S &hm LCTL T &kp G   &kp M &hm RCTL N &hm RSFT E &hm RALT I &hm LGUI O
         &hm LGUI Z &kp X &kp C &kp D &kp V                       &kp K &kp H  &kp CMMA &kp DOT &kp SLASH
-                        &lt SYM_L TAB &lt 2 SPC                       &lt NAV_L RET &lt NAV_L BKSP
+                        &lt SYM_L TAB &lt NUM_L SPC                       &lt NAV_L RET &lt NAV_L BKSP
         >;
         };
 
