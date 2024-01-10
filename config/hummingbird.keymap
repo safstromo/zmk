@@ -45,7 +45,7 @@
         compatible = "zmk,combos";
         combo_z {
             timeout-ms = <100>;
-            key-positions = <10 11>;
+            key-positions = <0 10>;
             layers = <0>;
             bindings = <&kp Z>;
         };
@@ -65,7 +65,7 @@
 
         combo_slash {
             timeout-ms = <100>;
-            key-positions = <18 19>;
+            key-positions = <9 19>;
             layers = <0>;
             bindings = <&kp SLASH>;
         };
@@ -243,10 +243,10 @@
         num_layer {
             display-name = "Num";
             bindings = <
-                &trans     &trans     &trans      &trans          &trans        &trans          &kp N7         &kp N8      &kp N9    &trans
-                &kp PSCRN  &trans     &trans      &trans          &trans        &trans          &kp N4         &kp N5      &kp N6    &trans
-                           &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP                                 &kp N1         &kp N2      &kp N3
-                                                  &trans          &trans        &kp N0          &trans
+                &kp N1     &kp N2     &kp N3      &kp N4          &kp N5        &kp N6          &kp N7         &kp N8      &kp N9    &kp N0
+                &kp PSCRN  &trans     &trans      &trans          &trans        &trans          &trans         &trans      &trans    &trans
+                           &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP                                 &trans         &trans      &trans
+                                                  &trans          &trans        &trans          &trans
             >;
         };
 
