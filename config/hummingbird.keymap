@@ -11,6 +11,7 @@
 #define NAV_L 1
 #define NUM_L 2
 #define SYM_L 3
+#define Func_L 4
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -233,10 +234,10 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-                &kp F12    &kp F7     &kp F8      &kp F9          &kp F10      &trans           &trans        &trans     &trans     &trans
+                &kp F12    &kp F7     &kp F8      &kp F9          &kp F10      &kp F11          &trans        &trans     &trans     &trans
                 &kp PSCRN  &kp F4     &kp F5      &kp F6          &kp HOME     &kp END          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
                            &kp F1     &kp F2      &kp F3                                        &trans        &kp PG_DN  &kp PG_UP
-                                                  &kp F10         &kp F11      &trans           &trans
+                                                  &mo Func_L      &mo Func_L   &trans           &trans
             >;
         };
 
@@ -246,7 +247,7 @@
                 &kp N1     &kp N2     &kp N3      &kp N4          &kp N5        &kp N6          &kp N7         &kp N8      &kp N9    &kp N0
                 &kp PSCRN  &trans     &trans      &trans          &trans        &trans          &trans         &trans      &trans    &trans
                            &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP                                 &trans         &trans      &trans
-                                                  &trans          &trans        &trans          &trans
+                                                  &trans          &trans        &mo Func_L      &mo Func_L
             >;
         };
 
@@ -256,7 +257,17 @@
                 &trans     &trans     &kp LS(RA(DQT))  &kp BACKSLASH &trans    &trans           &trans         &kp RA(SQT) &trans     &trans
                 &kp BANG   &kp ATSN   &kp HASH    &kp DLLR        &kp PRCT     &kp CRRT         &kp LBKT       &kp RBKT    &kp AMPS   &kp KMLT
                            &kp TILDE  &kp GRAVE   &kp PIPE                                      &kp MINUS      &kp EQL     &kp PLUS
-                                                  &trans          &trans       &trans           &trans
+                                                  &trans          &trans       &mo Func_L       &mo Func_L
+            >;
+        };
+
+        func_layer {
+            display-name = "Func";
+            bindings = <
+                &kp F1     &kp F2     &kp F3      &kp F4          &kp F5       &kp F6           &kp F7        &kp F8     &kp F9     &kp F10
+                &kp PSCRN  &trans     &trans      &trans          &trans       &trans           &trans        &trans     &kp F11    &kp F12
+                           &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP                                 &trans        &trans     &trans
+                                                  &kp F10         &kp F11      &trans           &trans
             >;
         };
     };
