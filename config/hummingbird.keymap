@@ -9,9 +9,8 @@
 
 #define DEF_L 0
 #define NAV_L 1
-#define NUM_L 2
-#define SYM_L 3
-#define Func_L 4
+#define SYM_L 2
+#define Func_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -227,27 +226,17 @@
                 &kp Q      &kp W      &kp F       &kp P           &kp B        &kp J            &kp L          &kp U       &kp Y      &kp SEMI
                 &hm LGUI A &hm LALT R &hm LSHFT S &hm LCTRL T     &kp V        &kp K            &hm RCTRL N    &hm RSHFT E &hm LALT I &hm LGUI O
                            &kp X      &kp C       &kp D                                         &kp H          &kp COMMA  &kp DOT
-                                                  &lt SYM_L TAB  &lt NUM_L SPACE       &lt NAV_L RET  &lt NAV_L BKSP
+                                                  &lt SYM_L TAB  &lt SYM_L SPACE       &lt NAV_L RET  &lt NAV_L BKSP
             >;
         };
 
         nav_layer {
             display-name = "Nav";
             bindings = <
-                &kp F12    &kp F7     &kp F8      &kp F9          &kp F10      &kp F11          &trans        &trans     &trans     &trans
-                &kp PSCRN  &kp F4     &kp F5      &kp F6          &kp HOME     &kp END          &kp LEFT      &kp DOWN   &kp UP     &kp RIGHT
-                           &kp F1     &kp F2      &kp F3                                        &trans        &kp PG_DN  &kp PG_UP
-                                                  &mo Func_L      &mo Func_L   &trans           &trans
-            >;
-        };
-
-        num_layer {
-            display-name = "Num";
-            bindings = <
                 &kp N1     &kp N2     &kp N3      &kp N4          &kp N5        &kp N6          &kp N7         &kp N8      &kp N9    &kp N0
-                &kp PSCRN  &trans     &trans      &trans          &trans        &trans          &trans         &trans      &trans    &trans
-                           &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP                                 &trans         &trans      &trans
-                                                  &trans          &trans        &mo Func_L      &mo Func_L
+                &kp PSCRN  &trans     &trans      &trans          &kp HOME     &kp END          &kp LEFT       &kp DOWN    &kp UP    &kp RIGHT
+                           &trans     &trans      &trans                                        &trans         &kp PG_DN  &kp PG_UP
+                                                  &mo Func_L      &mo Func_L   &trans           &trans
             >;
         };
 
@@ -267,7 +256,7 @@
                 &kp F1     &kp F2     &kp F3      &kp F4          &kp F5       &kp F6           &kp F7        &kp F8     &kp F9     &kp F10
                 &kp PSCRN  &trans     &trans      &trans          &trans       &trans           &trans        &trans     &kp F11    &kp F12
                            &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP                                 &trans        &trans     &trans
-                                                  &kp F10         &kp F11      &trans           &trans
+                                                  &trans          &trans       &trans           &trans
             >;
         };
     };
