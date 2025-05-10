@@ -7,23 +7,15 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include "keys_se.h"
 
 #define DEF_L 0
-#define SYM_L 1
-#define NAV_L 2
-#define NUM_L 2
-#define GAM_L 3
-#define FUN_L 4
-
+#define NAV_L 1
+#define SYM_L 2
+#define FUN_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
 
-&mt {
-    flavor = "tap-preferred";
-    tapping_term_ms = <300>;
-};
 
 / {
  behaviors {
@@ -209,51 +201,43 @@
             default_layer {
         bindings = <
 
-        &kp Q &kp W &kp F &kp P &kp B                       &kp J &kp L  &kp U    &kp Y   &kp SEMI
-        &kp A &hm LALT R &hm LSFT S &hm LCTL T &kp G   &kp M &hm RCTL N &hm RSFT E &hm RALT I &hm LGUI O
-        &hm LGUI Z &kp X &kp C &kp D &kp V                       &kp K &kp H  &kp CMMA &kp DOT &kp SLASH
-                        &lt SYM_L TAB &lt NUM_L SPC                       &lt NAV_L RET &lt NAV_L BKSP
+        &kp Q      &kp W      &kp F      &kp P      &kp B         &kp J   &kp L      &kp U      &kp Y      &kp SEMI
+        &hm LGUI A &hm LALT R &hm LSFT S &hm LCTL T &kp G         &kp M   &hm RCTL N &hm RSFT E &hm RALT I &hm LGUI O
+        &kp Z      &kp X      &kp C      &kp D      &kp V         &kp K   &kp H      &kp CMMA   &kp DOT    &kp SLASH
+                        &lt SYM_L TAB    &lt SYM_L SPC                    &lt NAV_L RET   &lt NAV_L BKSP
         >;
         };
 
-            left_layer {
-        bindings = <
-
-        &trans  &trans  &kp LS(RA(DQT)) &kp BACKSLASH &trans                            &trans   &trans   &kp RA(SQT) &trans  &trans
-        &kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT                                 &kp CRRT &kp LBKT &kp RBKT &kp AMPS &kp KMLT
-        &trans &kp TILDE  &kp GRAVE   &kp PIPE &trans                                   &kp MINUS &kp MINUS &kp EQL &kp PLUS &trans
-                                  &trans  &trans                                        &trans &mo FUN_L
-        >;
-        };
-
-            right_layer {
+            nav_layer {
+            display-name = "Nav";
         bindings = <
 
         &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp NUM_4  &kp NUM_5                   &kp NUM_6  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp NUM_0
-        &kp PSCRN  &trans &trans &trans &kp HOME                                   &kp END &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-        &kp PSCRN  &kp LC(X) &kp LC(C) &kp LC(Z)   &kp LC(V)                       &trans  &trans   &kp PG_DN &kp PG_UP  &trans
-                            &mo FUN_L &trans                                        &trans  &trans
+        &trans     &trans     &trans     &trans     &kp HOME                    &kp END    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+        &kp PSCRN  &kp LC(X)  &kp LC(C)  &kp LC(Z)  &kp LC(V)                   &trans     &trans     &kp PG_DN  &kp PG_UP  &trans
+                              &mo FUN_L  &mo FUN_L                                         &trans     &trans
         >;
         };
-            gaming_layer {
-                bindings = <
 
-            &kp TAB &kp Q &kp W &kp E &kp R                       &kp T &kp Y  &kp U &kp I &kp O
-            &kp LSFT &kp A &kp S &kp D &kp F                      &kp G &kp H &kp J &kp K &kp L
-            &kp LCTL &kp Z &kp X &kp C &kp V                      &kp B &kp N &kp M &kp CMMA &kp DOT
-                            &kp SLASH &kp SPC                     &kp RET &mo NAV_L
-            >;
-            };
-
-             tri_layer {
+            sym_layer {
+            display-name = "Sym";
         bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                              &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-        &kp LGUI &kp LALT &kp LSFT &kp LCTL &trans                      &tog GAM_L &kp LCTL  &kp LSFT &kp LALT &kp F11
-        &kp PSCRN  &bt BT_NXT &bt BT_PRV &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2 &bt BT_CLR  &kp K_VOL_UP &kp K_VOL_DN &kp F12
-                        &trans &trans                                   &trans &trans
+
+        &trans    &trans   &kp LS(RA(DQT))  &kp BACKSLASH  &trans               &trans    &trans    &kp RA(SQT) &trans   &trans
+        &kp BANG  &kp ATSN   &kp HASH       &kp DLLR       &kp PRCT             &kp CRRT  &kp LBKT  &kp RBKT    &kp AMPS &kp KMLT
+        &trans    &kp TILDE  &kp GRAVE      &kp PIPE       &trans               &kp MINUS &kp MINUS &kp EQL     &kp PLUS &trans
+                             &trans  &trans                                               &mo FUN_L &mo FUN_L
         >;
         };
 
-
+             func_layer {
+            display-name = "Func";
+        bindings = <
+        &kp F1     &kp F2     &kp F3     &kp F4       &kp F5           &kp F6       &kp F7      &kp F8       &kp F9       &kp F10
+        &trans     &trans     &trans     &trans       &trans           &trans       &trans      &trans       &trans       &kp F11
+        &kp PSCRN  &bt BT_NXT &bt BT_PRV &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2 &bt BT_CLR  &kp K_VOL_UP &kp K_VOL_DN &kp F12
+                              &trans     &trans                                     &trans   
+        >;
+        };
     };
 };
